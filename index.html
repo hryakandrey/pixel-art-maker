@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pixel Art Maker!</title>
+    <title>Pixel Art Maker! 2.0</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    // load external script after DOM is finished
+      document.addEventListener('DOMContentLoaded', function () {
+        var script = document.createElement('script');
+        script.src = "designs.js";
+        document.body.appendChild(script);
+      });
+    </script>
 </head>
 <body>
     <h1>Lab: Pixel Art Maker</h1>
@@ -24,6 +31,5 @@
     <h2>Design Canvas</h2>
     <table id="pixel_canvas"></table>
 
-    <script src="designs.js"></script>
 </body>
 </html>
